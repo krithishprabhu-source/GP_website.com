@@ -14,11 +14,10 @@ html, body{
     box-shadow:0px 60px 290px  black;
 }
 #overlay{
-    width:350px;
-    max-width:600px;
+    width:60%;
     flex-grow:1;
     margin-left:50px;
-    margin-right:50px;
+    margin-right:0px;
     height:500px;
     background-color:aquamarine;
     margin-top: 100px;
@@ -26,10 +25,11 @@ html, body{
     padding-right:10px;
     padding-left:10px;
     text-align:center;
+    z-index:1;
 }
 #overlay:hover{
     transition: all 0.6s ease; 
-    transform: scale(1.05); 
+    transform: scale(1.04); 
     box-shadow: 0px 5px 190px black;
 }
 .sets{
@@ -42,7 +42,7 @@ html, body{
 }
 .sets:hover{
     transition: all 0.6s ease; 
-    transform: scale(1.05);
+    transform: scale(1.04);
     box-shadow: 0px 5px 190px black;
 }
 #travelling_box{
@@ -74,4 +74,67 @@ html::-webkit-scrollbar{
     height:50px;
     width:100%;
     background-color: #73b4d2;
+    display:inline-block;
+}
+#side_bar_1{
+    width:40%;
+    background-color:black;
+    position:relative;
+    margin-top: 100px;
+    flex-grow:2;
+    height:500px;
+    background-color:rgb(87, 0, 0);
+    margin-right:50px;
+    margin-left:20px;
+    border-radius: 20px;
+}
+#side_bar_1:hover{
+    transition: all 0.6s ease; 
+    transform: scale(1.04); 
+    box-shadow: 0px 5px 190px black;
+}
+@media screen and (max-width:600px){
+    #header_one{
+        display:flex;
+        flex-direction:column;
+    }
+
+    #overlay, #side_bar_1 {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        position:absolute;
+    }
+    #overlay{
+        width:100%;
+        flex-grow:1;
+        height:200px;
+        background-color:aquamarine;
+        margin-top: 100px;
+        border-radius: 20px;
+        padding-right:10px;
+        padding-left:10px;
+        text-align:center;
+        z-index:1;
+    }
+    #side_bar_1{
+        width:100%;
+        background-color:black;
+        position:relative;
+        margin-top: 220px;
+        flex-grow:2;
+        height:500px;
+        background-color:rgb(87, 0, 0);
+        border-radius: 20px;
+    }
+
+    #travelling_box{
+        flex-direction:column;
+        margin-top: 670px;
+    }
+
+    .sets{
+        width: 90%;
+        height: 220px;
+    }
 }
