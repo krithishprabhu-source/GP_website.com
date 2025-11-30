@@ -1,8 +1,13 @@
+:root{
+    --primary-background-clr:#b8f2f2;
+    --box-clr:#A5D6A7;
+    --tst-db: scale(1.04); 
+}
 html, body{
     padding:0;
     margin:0;
     overflow-x:hidden;
-    background-color: #c9f8f8;
+    background-color:var(--primary-background-clr);
 }
 #header_one{
     position:absolute;
@@ -29,7 +34,7 @@ html, body{
 }
 #overlay:hover{
     transition: all 0.6s ease; 
-    transform: scale(1.04); 
+    transform: var(--tst-db); 
     box-shadow: 0px 5px 190px black;
 }
 .sets{
@@ -37,12 +42,12 @@ html, body{
     max-width: 600px;
     flex-grow: 1;
     height:260px;
-    background-color:#A5D6A7;
+    background-color:var(--box-clr);
     border-radius:10px;
 }
 .sets:hover{
     transition: all 0.6s ease; 
-    transform: scale(1.04);
+    transform: var(--tst-db);
     box-shadow: 0px 5px 190px black;
 }
 #travelling_box{
@@ -90,7 +95,7 @@ html::-webkit-scrollbar{
 }
 #side_bar_1:hover{
     transition: all 0.6s ease; 
-    transform: scale(1.04); 
+    transform: var(--tst-db); 
     box-shadow: 0px 5px 190px black;
 }
 @media screen and (max-width:600px){
